@@ -1,0 +1,103 @@
+/*CSS RESET*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+* {
+	box-sizing: border-box;
+}
+/*CSS RESET END*/
+body {
+	background-image: url(../images/toilet.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.main {
+	text-align: center;
+
+}
+.main h1 {
+	font-size: 30px;
+	padding-top: 30px;
+	margin-bottom: 20px;
+	font-weight: 700;
+	color: #000;
+}
+.search {
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 30px;
+	color: #fff;
+	outline: none;
+	border-radius: 80px;
+	padding: 20px 40px;
+	letter-spacing: 2px;
+	transition: all .5s;
+	background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+.search:hover {
+	border: 1px solid red;
+	color: red;
+	background-image: none;
+	background-color: #fff;
+}
+.search:active {
+	outline: none;
+}
+#map {
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+	box-shadow: none;
+	transition: .3s;
+}
+#map:hover {
+	transform: translateY(-10px) scale(1.05);
+}
