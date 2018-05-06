@@ -1,3 +1,4 @@
+// Generate Google Map
 $(document).ready(function () {
   $('.search').on('click', function initMap() {
     $('#map').css('box-shadow', '1px 3px 20px -3px rgba(0,0,0,0.75)');
@@ -22,7 +23,7 @@ $(document).ready(function () {
     }
   });
 });
-// Data
+// Below Area is Data
 var thisData = [{
     "Country": "花蓮縣",
     "City": "花蓮市",
