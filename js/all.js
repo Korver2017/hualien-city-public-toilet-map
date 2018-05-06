@@ -1,5 +1,29 @@
-var thisData = [
-  {
+$(document).ready(function () {
+  $('.search').on('click', function initMap() {
+    $('#map').css('box-shadow', '1px 3px 20px -3px rgba(0,0,0,0.75)');
+    var myLatLng = {
+      lat: 23.98439014,
+      lng: 121.6115606
+    };
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: myLatLng,
+      zoom: 14
+    });
+    var dataLen = thisData.length;
+    for (i = 0; i < dataLen; i++) {
+      var str = {};
+      var place = {};
+      place.lat = parseFloat(thisData[i]['Latitude']);
+      place.lng = parseFloat(thisData[i]['Longitude']);
+      str.map = map;
+      str.title = thisData[i]['Name']
+      str.position = place;
+      new google.maps.Marker(str);
+    }
+  });
+});
+// Data
+var thisData = [{
     "Country": "花蓮縣",
     "City": "花蓮市",
     "Village": "民孝里",
@@ -4147,35 +4171,3 @@ var thisData = [
     "Latitude": "23.99176139"
   },
 ]
-
-                $(document).ready(function() {
-            $('.search').on('click', function initMap() {
-                $('#map').css('box-shadow', '1px 3px 20px -3px rgba(0,0,0,0.75)');
-      var myLatLng = {lat: 23.98439014, lng: 121.6115606};
-
-      var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          zoom: 14
-        });
-
-      for(i=0;i<thisData.length;i++){
-          var str ={};
-          var place = {};
-
-
-
-        
-          place.lat = parseFloat(thisData[i]['Latitude']);
-          place.lng = parseFloat(thisData[i]['Longitude']);
-        
-          str.map = map;
-          str.title= thisData[i]['Name']
-          str.position = place;
-          new google.maps.Marker(str);
-      }
-        });
-        {
-            
-
-            }
-        });

@@ -101,9 +101,6 @@ body {
 	box-shadow: none;
 	transition: .3s;
 }
-#map:hover {
-	transform: translateY(-10px) scale(1.05);
-}
 @media (max-width: 767px) {
 	#map {
 		height: 350px;
