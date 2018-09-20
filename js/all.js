@@ -11,7 +11,7 @@ $(document).ready(function () {
       zoom: 14
     });
     var dataLen = thisData.length;
-    for (i = 0; i < dataLen; i++) {
+    for (var i = 0; i < dataLen; i++) {
       var str = {};
       var place = {};
       place.lat = parseFloat(thisData[i]['Latitude']);
@@ -23,7 +23,6 @@ $(document).ready(function () {
     }
   });
 });
-// Below Area is Data
 var thisData = [{
     "Country": "花蓮縣",
     "City": "花蓮市",
