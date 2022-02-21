@@ -14,7 +14,7 @@ import locations from './data.js';
  *
  */
 $(document).ready (function () {
-  $('.search').on ('click', function initMap () {
+  $('.button').on ('click', function initMap () {
     $('#map').css ('box-shadow', '1px 3px 20px -3px rgba(0,0,0,0.75)');
 
     // Initialize map.
