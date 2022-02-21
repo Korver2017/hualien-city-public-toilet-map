@@ -5,7 +5,7 @@
  * Import locations list const data.
  *
  */
-import data from './data.js';
+import locations from './data.js';
 
 
 /**
@@ -19,31 +19,30 @@ $(document).ready (function () {
 
     $('#map').css ('box-shadow', '1px 3px 20px -3px rgba(0,0,0,0.75)');
 
-    const myLatLng = {
+    const center = {
       lat: 23.98439014,
       lng: 121.6115606
     };
 
-    const map = new google.maps.Map (document.getElementById ('map'), {
-      center: myLatLng,
+    const map = new google.maps.Map ($('#map')[0], {
+      center,
       zoom: 14
     });
-    
-    const dataLen = data.length;
 
-    for (let i = 0; i < dataLen; i ++) {
+    locations.forEach (location => {
 
-      let str = {};
-      let place = {};
+      let position = {}
+        , mark = {}
+        ;
 
-      place.lat = parseFloat (data[i]['Latitude']);
-      place.lng = parseFloat (data[i]['Longitude']);
+      position.lat = parseFloat (location['Latitude']);
+      position.lng = parseFloat (location['Longitude']);
 
-      str.map = map;
-      str.title = data[i]['Name'];
-      str.position = place;
+      mark.map = map;
+      mark.title = location['Name'];
+      mark.position = position;
 
-      new google.maps.Marker (str);
-    }
+      new google.maps.Marker (mark);
+    });
   });
 });
